@@ -48,6 +48,7 @@ body {
     margin-bottom: 30px;
     text-align: center;
     width: 100%;
+    margin-top: 50px;
 }
 
 .hero-text {
@@ -144,16 +145,21 @@ body {
 /* Responsive Tasarım */
 @media (max-width: 992px) {
     .hero {
-        padding: 120px 0 60px;
+        padding: 150px 0 60px;
     }
 
     .hero h1 {
         font-size: 2.8rem;
         text-align: center;
+        margin-top: 30px;
     }
 
     .hero-text h2 {
         font-size: 1.8rem;
+    }
+
+    .hero-content {
+        margin-top: 40px;
     }
 
     .goals-content {
@@ -164,20 +170,17 @@ body {
     .feature {
         flex: 0 1 calc(50% - 15px);
     }
-
-    .hero-content {
-        margin-top: 20px;
-    }
 }
 
 @media (max-width: 480px) {
     .hero {
-        padding: 100px 0 40px;
+        padding: 130px 0 40px;
     }
 
     .hero h1 {
         font-size: 2.2rem;
         text-align: center;
+        margin-top: 50px;
     }
 
     .hero-text h2 {
@@ -187,6 +190,10 @@ body {
     .hero-text p {
         font-size: 1rem;
         line-height: 1.6;
+    }
+
+    .hero-content {
+        margin-top: 30px;
     }
 
     .feature {
