@@ -2338,4 +2338,29 @@ html {
         font-size: 0.9rem;
         margin-bottom: 20px;
     }
+}
+
+/* Optimize edilmiş stil tanımlamaları */
+img {
+    content-visibility: auto;
+    contain: size layout paint;
+}
+
+/* Animasyonlar için will-change kullanımı */
+.nav-links a:hover,
+.social-link:hover,
+.cert-item:hover,
+.target-card:hover {
+    will-change: transform;
+}
+
+/* Font yüklemelerini optimize etme */
+@font-face {
+    font-family: 'Playfair Display';
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
 } 
