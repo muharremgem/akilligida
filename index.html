@@ -73,17 +73,15 @@
        <!-- Hero Section -->
        <section id="hero" class="hero" aria-label="Ana Bölüm">
               <div class="container">
-                     <div class="hero-content">
-                            <h1>Akıllı Gıda Takviyesi</h1>
-                            <div class="hero-text">
-                                   <h2>Akıllı Gıda Takviyesi Nedir?</h2>
-                                   <p>Akıllı Gıda Takviyesi, geleneksel takviyelere yeni bir soluk getiren, bilimsel
-                                          yenilikler ve modern teknoloji ile geliştirilmiş sağlık destek ürünleridir. Bu
-                                          konsept, maksimum etki ve emilim sağlamak için lipozomal teknoloji gibi
-                                          yenilikçi metotları kullanarak, vücudun özelleşmiş ihtiyaçlarına yanıt verir.
-                                          Akıllı Gıda Takviyesi, yalnızca fiziksel değil, zihinsel ve duygusal
-                                          sağlığınıza da olumlu katkı sağlar.</p>
-                            </div>
+                     <h1>Akıllı Gıda Takviyesi</h1>
+                     <div class="hero-text">
+                            <h2>Akıllı Gıda Takviyesi Nedir?</h2>
+                            <p>Akıllı Gıda Takviyesi, geleneksel takviyelere yeni bir soluk getiren, bilimsel
+                                   yenilikler ve modern teknoloji ile geliştirilmiş sağlık destek ürünleridir. Bu
+                                   konsept, maksimum etki ve emilim sağlamak için lipozomal teknoloji gibi
+                                   yenilikçi metotları kullanarak, vücudun özelleşmiş ihtiyaçlarına yanıt verir.
+                                   Akıllı Gıda Takviyesi, yalnızca fiziksel değil, zihinsel ve duygusal
+                                   sağlığınıza da olumlu katkı sağlar.</p>
                      </div>
                      <div class="hero-features">
                             <div class="feature">
@@ -113,9 +111,10 @@
        <!-- Amaç ve Hedefler Section -->
        <section id="goals" class="goals" aria-label="Amaç ve Hedefler">
               <div class="container">
+                     <h2>Amaç & Hedefler</h2>
                      <div class="goals-content">
                             <div class="goals-left">
-                                   <h2>Amaç</h2>
+                                   <h3>Amaç</h3>
                                    <ul>
                                           <li>Modern yaşam temposunun getirdiği zorluklara karşı bireylerin daha
                                                  sağlıklı ve dengeli bir yaşam sürebilmelerine destek olmak.</li>
@@ -124,15 +123,15 @@
                                    </ul>
                             </div>
                             <div class="goals-right">
-                                   <h2>Hedef</h2>
+                                   <h3>Hedef</h3>
                                    <ol>
                                           <li>
-                                                 <h3>Sağlığa Değer Katma:</h3>
+                                                 <h4>Sağlığa Değer Katma:</h4>
                                                  <p>Tüm yaş grupları için daha hızlı, güvenilir ve gözle görülür
                                                         faydalar sağlamak.</p>
                                           </li>
                                           <li>
-                                                 <h3>Bilimsel Yaklaşımı Yaygınlaştırma:</h3>
+                                                 <h4>Bilimsel Yaklaşımı Yaygınlaştırma:</h4>
                                                  <p>En son teknolojileri kullanarak bireylere bilimle desteklenmiş
                                                         çözümler sunmak.</p>
                                           </li>
@@ -581,26 +580,25 @@
                                    </div>
                             </div>
                             <div class="contact-form">
-                                   <h2>Ücretsiz Danışmanlık</h2>
-                                   <p>Ücretsiz danışmanlık almak için formu doldurun.</p>
-                                   <form id="contactForm">
+                                   <h2>İletişim Formu</h2>
+                                   <p>Bizimle iletişime geçin</p>
+                                   <form action="#" method="POST" role="form" aria-label="İletişim Formu">
                                           <div class="form-group">
-                                                 <input type="text" id="name" name="name" placeholder="Adınız Soyadınız"
-                                                        required>
+                                                 <label for="name">Ad Soyad</label>
+                                                 <input type="text" id="name" name="name" required aria-required="true">
                                           </div>
                                           <div class="form-group">
-                                                 <input type="email" id="email" name="email"
-                                                        placeholder="E-posta Adresiniz" required>
+                                                 <label for="email">E-posta</label>
+                                                 <input type="email" id="email" name="email" required
+                                                        aria-required="true">
                                           </div>
                                           <div class="form-group">
-                                                 <input type="tel" id="phone" name="phone"
-                                                        placeholder="Telefon Numaranız" required>
+                                                 <label for="message">Mesajınız</label>
+                                                 <textarea id="message" name="message" required
+                                                        aria-required="true"></textarea>
                                           </div>
-                                          <div class="form-group">
-                                                 <textarea id="message" name="message" placeholder="Projenizi Anlatın"
-                                                        required></textarea>
-                                          </div>
-                                          <button type="submit" class="submit-btn">ÜCRETSİZ DANIŞMANLIK AL</button>
+                                          <button type="submit" class="submit-btn"
+                                                 aria-label="Formu Gönder">Gönder</button>
                                    </form>
                             </div>
                      </div>
@@ -653,10 +651,14 @@
                             <div class="footer-social">
                                    <h4>Bizi Takip Edin</h4>
                                    <div class="social-links">
-                                          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                                          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                                          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                                          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                          <a href="#" class="social-link" aria-label="Facebook'ta bizi takip edin"><i
+                                                        class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                          <a href="#" class="social-link" aria-label="Twitter'da bizi takip edin"><i
+                                                        class="fab fa-twitter" aria-hidden="true"></i></a>
+                                          <a href="#" class="social-link" aria-label="Instagram'da bizi takip edin"><i
+                                                        class="fab fa-instagram" aria-hidden="true"></i></a>
+                                          <a href="#" class="social-link" aria-label="LinkedIn'de bizi takip edin"><i
+                                                        class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                                    </div>
                             </div>
                      </div>
