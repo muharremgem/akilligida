@@ -553,21 +553,22 @@
                                                  <i class="fas fa-map-marker-alt"></i>
                                                  <div>
                                                         <h3>Adres</h3>
-                                                        <p>Merkez Mah. Teknoloji Cad. No:123 İstanbul</p>
+                                                        <p>Levent, Kanyon Ofis Binası, Büyükdere Cd. No:185 D:6. Kat,
+                                                               34394 Şişli/İstanbul</p>
                                                  </div>
                                           </div>
                                           <div class="contact-item">
                                                  <i class="fas fa-envelope"></i>
                                                  <div>
                                                         <h3>E-posta</h3>
-                                                        <p>info@akilligidatakviyesi.com</p>
+                                                        <p>info@kiperincollagenturkiye.com</p>
                                                  </div>
                                           </div>
                                           <div class="contact-item">
                                                  <i class="fas fa-phone"></i>
                                                  <div>
                                                         <h3>Telefon</h3>
-                                                        <p>+90 (212) 555 0123</p>
+                                                        <p>0850 346 4159</p>
                                                  </div>
                                           </div>
                                           <div class="contact-item">
@@ -617,10 +618,10 @@
                                    </div>
                                    <div class="contact-info">
                                           <h4>İletişim Bilgileri</h4>
-                                          <p><i class="fas fa-map-marker-alt"></i> Merkez Mah. Teknoloji Cad. No:123
-                                                 İstanbul</p>
-                                          <p><i class="fas fa-phone"></i> +90 (212) 555 0123</p>
-                                          <p><i class="fas fa-envelope"></i> info@akilligidatakviyesi.com</p>
+                                          <p><i class="fas fa-map-marker-alt"></i> Levent, Kanyon Ofis Binası, Büyükdere
+                                                 Cd. No:185 D:6. Kat, 34394 Şişli/İstanbul</p>
+                                          <p><i class="fas fa-phone"></i> 0850 346 4159</p>
+                                          <p><i class="fas fa-envelope"></i>info@kiperincollagenturkiye.com</p>
                                    </div>
                             </div>
 
@@ -651,14 +652,23 @@
                             <div class="footer-social">
                                    <h4>Bizi Takip Edin</h4>
                                    <div class="social-links">
-                                          <a href="#" class="social-link" aria-label="Facebook'ta bizi takip edin"><i
+                                          <a href="https://www.facebook.com/kiperinturkiye" target="_blank"
+                                                 class="social-link" aria-label="Facebook'ta bizi takip edin"><i
                                                         class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                                          <a href="#" class="social-link" aria-label="Twitter'da bizi takip edin"><i
-                                                        class="fab fa-twitter" aria-hidden="true"></i></a>
-                                          <a href="#" class="social-link" aria-label="Instagram'da bizi takip edin"><i
+                                          <a href="https://x.com/kiperincollagen" target="_blank" class="social-link"
+                                                 aria-label="Twitter'da bizi takip edin"><i class="fab fa-twitter"
+                                                        aria-hidden="true"></i></a>
+                                          <a href="https://www.instagram.com/kiperincollagenturkiye/" target="_blank"
+                                                 class="social-link" aria-label="Instagram'da bizi takip edin"><i
                                                         class="fab fa-instagram" aria-hidden="true"></i></a>
-                                          <a href="#" class="social-link" aria-label="LinkedIn'de bizi takip edin"><i
-                                                        class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                                          <a href="https://www.youtube.com/@kiperincollagenturkiye" target="_blank"
+                                                 class="social-link" aria-label="YouTube'da bizi takip edin">
+                                                 <i class="fab fa-youtube" aria-hidden="true"></i>
+                                          </a>
+                                          <a href="https://www.tiktok.com/@kiperincollagentr" target="_blank"
+                                                 class="social-link" aria-label="TikTok'ta bizi takip edin">
+                                                 <i class="fab fa-tiktok" aria-hidden="true"></i>
+                                          </a>
                                    </div>
                             </div>
                      </div>
@@ -666,12 +676,32 @@
                      <!-- Alt Footer -->
                      <div class="footer-bottom">
                             <p>&copy; 2025 Akıllı Gıda Takviyesi. Tüm hakları saklıdır. | <a style="color: white;"
-                                          href="https://akilligidatakviyesi.com"> akilligidatakviyesi.com</a></p>
+                                          href="https://muharremgem.com" target="_blank"> Gem Agency</a></p>
                      </div>
               </div>
        </footer>
 
+       <div class="success-modal" id="successModal">
+              <div class="modal-content">
+                     <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                     </div>
+                     <h3>Teşekkürler!</h3>
+                     <p>Formunuz başarıyla iletilmiştir.</p>
+                     <p class="small-text">En kısa sürede size dönüş yapacağız.</p>
+                     <button class="modal-close-btn" onclick="closeModal()">Tamam</button>
+              </div>
+       </div>
+
        <script src="script.js" defer></script>
+       <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+       <script>
+              (function ()
+              {
+                     emailjs.init("9IEs1bQiJMcgaChXP"); // EmailJS public key'inizi buraya ekleyin
+              })();
+       </script>
+
 </body>
 
 </html>
