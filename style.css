@@ -1757,9 +1757,9 @@ body {
 }
 
 .logo img {
+    width: 75px;
     height: 75px;
-    width: auto;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .logo img:hover {
@@ -1845,7 +1845,7 @@ body {
     }
 
     .logo img {
-        height: 40px;
+        width: 40px;
         margin-left: 5px;
     }
 
@@ -1926,7 +1926,8 @@ body {
     }
 
     .logo img {
-        height: 35px;
+        width: 60px;
+        height: 60px;
     }
 
     .mobile-title {
