@@ -209,11 +209,13 @@ body {
 }
 
 .problems-image {
-    position: relative;
+    width: 100%;
+    max-width: 700px;
     height: 400px;
+    position: relative;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Sorun Tanımı Section */
@@ -231,105 +233,133 @@ body {
 }
 
 .problems-content {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 50px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 50px;
+}
+
+.problems-image:hover .problem-img {
+    transform: scale(1.05);
+}
+
+.problems-text-wrapper {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.problems-text {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .problems-text h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #34495e;
     margin-bottom: 20px;
 }
 
-.problems-text > p {
+.problems-text p {
     font-size: 1.1rem;
     color: #666;
-    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
-.problems-list {
-    list-style: none;
+.problems-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
 }
 
-.problems-list li {
+.problem-card {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
-    opacity: 0;
-    transform: translateX(-20px);
+    text-align: center;
 }
 
-.problems-list li.animate {
-    opacity: 1;
-    transform: translateX(0);
-    transition: all 0.5s ease;
+.problem-card:hover {
+    transform: translateY(-10px);
 }
 
-.problems-list li:hover {
-    transform: translateX(10px);
+.card-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
 }
 
-.problems-list h4 {
+.card-icon i {
+    font-size: 1.8rem;
+    color: #3498db;
+}
+
+.problem-card h4 {
     color: #2c3e50;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
     font-weight: 600;
 }
 
-.problems-list p {
+.problem-card p {
     color: #666;
     font-size: 1rem;
     line-height: 1.6;
 }
 
-.problems-image {
-    opacity: 0;
-    transform: translateX(20px);
-}
-
-.problems-image.animate {
-    opacity: 1;
-    transform: translateX(0);
-    transition: all 0.8s ease;
-}
-
 /* Responsive Düzenlemeler */
-@media (max-width: 768px) {
-    .problems-content {
-        grid-template-columns: 1fr;
+@media (max-width: 992px) {
+    .problems-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
-
+    
     .problems-image {
-        order: -1;
-        margin-bottom: 30px;
+        height: 350px;
+        max-width: 700px;
     }
+}
 
+@media (max-width: 768px) {
     .problems h2 {
         font-size: 2rem;
     }
 
     .problems-text h3 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    .problems-image {
+        height: 300px;
+        max-width: 600px;
     }
 }
 
-@media (max-width: 480px) {
-    .problems h2 {
-        font-size: 1.8rem;
+@media (max-width: 576px) {
+    .problems-cards {
+        grid-template-columns: 1fr;
     }
 
-    .problems-list li {
+    .problems-image {
+        height: 250px;
+        max-width: 100%;
+    }
+
+    .problems-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .problem-card {
         padding: 20px;
-    }
-
-    .problems-list h4 {
-        font-size: 1.1rem;
     }
 }
 
@@ -511,15 +541,47 @@ body {
 }
 
 .norms-image {
-    max-width: 400px;
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     margin: 0 auto 40px;
 }
 
 .norm-img {
     width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.norms-image:hover .norm-img {
+    transform: scale(1.05);
+}
+
+/* Responsive ayarlamalar */
+@media (max-width: 992px) {
+    .norms-image {
+        height: 250px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .norms-image {
+        height: 300px;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 576px) {
+    .norms-image {
+        height: 230px;
+        max-width: 100%;
+    }
 }
 
 .norms-grid {
@@ -617,10 +679,6 @@ body {
         font-size: 2rem;
     }
 
-    .norms-image {
-        max-width: 300px;
-    }
-
     .norm-card h3 {
         font-size: 1.3rem;
     }
@@ -667,7 +725,7 @@ body {
 
 .certificate-header {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 400px 1fr;
     gap: 30px;
     padding: 30px;
     background: rgba(52, 152, 219, 0.03);
@@ -676,13 +734,20 @@ body {
 
 .certificate-image {
     width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .cert-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 10px;
 }
 
 .certificate-title {
@@ -776,48 +841,91 @@ body {
     }
 
     .certificate-image {
-        max-width: 300px;
+        max-width: 400px;
+        height: 450px;
         margin: 0 auto;
     }
-}
 
-@media (max-width: 768px) {
     .certificate-items {
         grid-template-columns: 1fr;
-    }
-
-    .certificate-title h2 {
-        font-size: 1.8rem;
+        gap: 15px;
     }
 
     .cert-item {
         padding: 15px;
+        align-items: flex-start;
+    }
+
+    .cert-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+
+    .cert-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .cert-info p {
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
 }
 
-@media (max-width: 480px) {
-    .certificate {
-        padding: 30px 0;
-    }
-
-    .certificate-wrapper {
-        border-radius: 15px;
-    }
-
-    .certificate-header {
-        padding: 20px;
-    }
-
-    .certificate-title h2 {
-        font-size: 1.5rem;
+@media (max-width: 768px) {
+    .certificate-image {
+        max-width: 350px;
+        height: 400px;
     }
 
     .certificate-content {
         padding: 20px;
     }
 
+    .cert-item {
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 12px;
+        border-left: 4px solid #3498db;
+    }
+
+    .cert-info h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate-image {
+        max-width: 300px;
+        height: 350px;
+    }
+    
+    .certificate-header {
+        padding: 20px;
+    }
+
+    .certificate-items {
+        gap: 12px;
+    }
+
+    .cert-item {
+        padding: 12px;
+    }
+
+    .cert-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
     .cert-info h3 {
         font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .cert-info p {
+        font-size: 0.9rem;
     }
 }
 
@@ -862,21 +970,25 @@ body {
 }
 
 .target-image {
-    margin: 30px auto;
-    max-width: 500px;
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
     position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
 }
 
 .target-img {
     width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
-.target-img:hover {
-    transform: scale(1.02);
+.target-image:hover .target-img {
+    transform: scale(1.05);
 }
 
 .target-cards {
@@ -899,7 +1011,6 @@ body {
     margin-top: 25px;
 }
 
-/* Ortak kart stilleri */
 .target-card {
     background: white;
     border-radius: 15px;
@@ -908,26 +1019,12 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    position: relative;
-    overflow: hidden;
-}
-
-.target-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #3498db;
-    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
 }
 
 .target-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .card-icon {
@@ -939,25 +1036,11 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    transition: all 0.3s ease;
-}
-
-.target-card:hover .card-icon {
-    background: #3498db;
 }
 
 .card-icon i {
     color: #3498db;
     font-size: 1.6rem;
-    transition: all 0.3s ease;
-}
-
-.target-card:hover .card-icon i {
-    color: white;
-}
-
-.card-content {
-    flex-grow: 1;
 }
 
 .card-content h4 {
@@ -974,19 +1057,8 @@ body {
     margin: 0;
 }
 
-/* Son iki kartın bulunduğu satır için wrapper */
-.target-cards::after {
-    content: "";
-    flex-basis: 100%;
-    height: 0;
-}
-
 /* Responsive Düzenlemeler */
 @media (max-width: 992px) {
-    .target-cards {
-        gap: 20px;
-    }
-
     .target-card:nth-child(-n+3) {
         flex: 0 1 calc(50% - 10px);
     }
@@ -995,21 +1067,9 @@ body {
         flex: 0 1 100%;
         margin-top: 20px;
     }
-
-    .target-image {
-        max-width: 400px;
-    }
 }
 
 @media (max-width: 768px) {
-    .target-wrapper {
-        padding: 30px 20px;
-    }
-
-    .target-cards {
-        gap: 25px;
-    }
-
     .target-card:nth-child(-n+3),
     .target-card:nth-last-child(-n+2) {
         flex: 0 1 100%;
@@ -1021,12 +1081,12 @@ body {
 }
 
 @media (max-width: 480px) {
-    .target-wrapper {
-        padding: 20px 15px;
+    .target-cards {
+        gap: 15px;
     }
 
-    .target-header h2 {
-        font-size: 1.8rem;
+    .target-card {
+        padding: 20px;
     }
 
     .card-icon {
@@ -1040,6 +1100,10 @@ body {
 
     .card-content h4 {
         font-size: 1.1rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
     }
 }
 
@@ -1576,22 +1640,24 @@ body {
 
 .results-image {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 700px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: 50px auto;
+    
 }
 
 .results-image img {
     width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
     transition: transform 0.3s ease;
 }
 
-.results-image img:hover {
-    transform: scale(1.02);
+.results-image:hover img {
+    transform: scale(1.05);
 }
 
 /* Responsive Düzenlemeler */
@@ -1607,6 +1673,9 @@ body {
 
     .results-image {
         order: 2;
+        height: 450px;
+        max-width: 600px;
+        margin: 0px auto;
     }
 
     .results-text-content h2 {
@@ -2536,5 +2605,121 @@ img {
     .modal-close-btn {
         padding: 10px 30px;
         font-size: 14px;
+    }
+}
+
+/* Changes Image Styles */
+.changes-image {
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    margin: 50px auto 0;
+}
+
+.change-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.changes-image:hover .change-img {
+    transform: scale(1.05);
+}
+
+/* Responsive ayarlamalar */
+@media (max-width: 992px) {
+    .changes-image {
+        height: 300px;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .changes-image {
+        height: 250px;
+        max-width: 100%;
+        margin: 30px auto;
+        background-color: #fff;
+        padding: 10px;
+    }
+    
+    .change-img {
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 576px) {
+    .changes-image {
+        height: 220px;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .changes-image {
+        height: 200px;
+        max-width: 350px;
+        margin: 20px auto;
+    }
+}
+
+/* İletişim linkleri için stiller */
+.contact-link, .footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.contact-link::after, .footer-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover::after, .footer-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.contact-link:hover, .footer-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mobil için ek düzenlemeler */
+@media (max-width: 768px) {
+    .contact-link, .footer-link {
+        display: inline-block;
+        padding: 5px 0;
+    }
+    
+    /* Footer linkleri beyaz kalacak */
+    .footer-link {
+        color: #ffffff;
+    }
+    
+    /* Contact section'daki linkler siyah olacak */
+    .contact-link {
+        color: #2c3e50;
+    }
+    
+    .contact-link::after {
+        background-color: #2c3e50;
+    }
+    
+    .contact-link:hover {
+        color: rgba(44, 62, 80, 0.8);
     }
 } 
